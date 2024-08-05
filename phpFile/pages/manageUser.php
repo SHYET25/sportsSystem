@@ -139,6 +139,25 @@
         .active {
             color: white;
         }
+
+        #loadingScreen {
+            display: none; /* Initially hidden */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 10000; /* Ensure it's above other content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loadingScreen img {
+            width: 100px; /* Adjust size as needed */
+            height: 100px; /* Adjust size as needed */
+        }
     </style>
 
     
@@ -161,15 +180,15 @@
         </div>
 
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">☰</a>
-        <a href="#" class="loading-link" title="Home Page"><i class="fa-solid fa-house"></i>Home</a>
-        <a href="riderPage.php" class="loading-link" title="Search Customers"><i class="fa-solid fa-map-location-dot"></i>Explore</a>
-        <a href="salaryPage.php" class="loading-link"><i class="fa-solid fa-piggy-bank active"></i>Salary</a>
+        <a href="admin.php" class="loading-link" title="Home Page"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="manageUser.php" class="loading-link" title="Search Customers"><i class="fa-solid fa-user active"></i>Profiles</a>
+        <a href="" class="loading-link"><i class="fa-solid fa-piggy-bank"></i>Salary</a>
         <a href="#" class="loading-link"><i class="fas fa-envelope mr-2"></i>Contact</a>
-        <a href="../buttonFunctions/logOut.php" class="loading-link"><i class="fa-solid fa-right-from-bracket"></i>Log_Out</a>
+        <a href="../buttonFunction/logOutButton.php" class="loading-link"><i class="fa-solid fa-right-from-bracket"></i>Log_Out</a>
     </div>
 
     <div id="main">
-        
+        <p>asdasdadadsadasasdaddasdsadaasddddssadasddasdasdsd</p>
     </div>
 
     <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">

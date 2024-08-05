@@ -128,6 +128,51 @@ $(document).ready(function() {
        
     });
 
+
+    $('#signInButton').on('click', function() {
+        
+
+        const userEmailLog = $('#userEmailLog').val();
+        const userPassLog = $('#userPassLog').val();
+
+        $('#signInButton .spinner-border').show();
+        $('#buttonText').text('Signing In...');
+
+        $.ajax({
+            type: 'POST',
+            url: 'phpFile/buttonFunction/signInButton.php',
+            data: {
+                userEmailLog: userEmailLog,
+                userPassLog: userPassLog
+            },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert('User logged in successfully!');
+                    $('#userEmailLog').val('');
+                    $('#userPassLog').val('');
+                    // $('#buttonText').text('Signed In');
+                    window.location.href = response.redirectUrl;
+                } 
+                // else {
+                //     alert('Error: ' + response.message);
+                //     $('#buttonText').text('Incorrect Cridentials');
+                //     setTimeout(function() {
+                //         $('#buttonText').text('Log In');
+                //     }, 2000);
+                // }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('AJAX Error: ' + status + ' - ' + error);
+            },
+
+            complete: function() {
+                // Hide the spinner when the AJAX request is complete
+                $('#signInButton .spinner-border').hide();
+            }
+        });
+    });
     
 
 });

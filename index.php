@@ -34,13 +34,13 @@
           <div class="page" id="tab1" style="display:block;">
             	
 					<p class="login-email input"> 
-						<input type="text" name="" id="emailLogIn"  class="innerInput"  maxlength="60" placeholder="E-mail"> 
+						<input type="text" name="userEmailLog" id="userEmailLog"  class="innerInput"  maxlength="60" placeholder="E-mail"> 
 					</p>
 					<p class="login-password input"> 
-						<input type="password" name="emailPass" id="emailPass" class="innerInput" maxlength="60"  placeholder="Password"> 
+						<input type="password" name="userPassLog" id="userPassLog" class="innerInput" maxlength="60"  placeholder="Password"> 
 					</p> 
 					<p class="login-submit"> 
-						<input type="submit" name="" id="emailBUttoin" class="button-primary" value="Log In">
+						<button type="button" name="" id="signInButton" class="button-primary" value="Log In">Log In</button>
 					</p> 
 					<p>
 						<span class="login-forget"  title="Send email and get new password">Forgot password?</span>
@@ -51,7 +51,7 @@
 							<input type="text" name="" id="emailPassasdad"  class="innerInput" maxlength="60" placeholder="Enter your email"> 
 						</p>
 						<p class="login-submit"> 
-						<input type="submit" name="" id="signInButton" class="button-primary" value="Retrieve password">
+						<input type="submit" name="" id="" class="button-primary" value="Retrieve password">
 					</p> 
 					</span>
 				
