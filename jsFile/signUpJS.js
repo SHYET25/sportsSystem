@@ -1,6 +1,6 @@
 function getSports() {
     $.ajax({
-        url: '../onloadFunction/getSports.php', // The PHP file that fetches sports data
+        url: 'phpFile/onloadFunction/getSports.php', // The PHP file that fetches sports data
         method: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -27,7 +27,7 @@ function getPositions(sport) {
     }
 
     $.ajax({
-        url: '../onloadFunction/getPosition.php', // The PHP file that fetches positions data
+        url: 'phpFile/onloadFunction/getPosition.php', // The PHP file that fetches positions data
         method: 'GET',
         data: { sport: sport },
         dataType: 'json',
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
             $.ajax({
                 type: 'POST',
-                url: '../buttonFunction/signUpButton.php',
+                url: 'phpFile/buttonFunction/signUpButton.php',
                 data: {
                     athNum: athNum,
                     athFirst: athFirst,

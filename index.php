@@ -6,15 +6,15 @@
     <title>Sign Up</title>
 
     <!-- BS LINKS -->
-    <link rel="stylesheet" href="../../bsCSS/bootstrap.css">
-    <link rel="stylesheet" href="../../bsCSS/bootstrap.min.css">
-    <script src="../../bsJS/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bsCSS/bootstrap.css">
+    <link rel="stylesheet" href="bsCSS/bootstrap.min.css">
+    <script src="bsJS/bootstrap.bundle.min.js"></script>
 
     <!-- Font Awesome Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- Page CSS and JS -->
-    <link rel="stylesheet" href="../../cssFile/signUpCSS.css">
+    <link rel="stylesheet" href="cssFile/signUpCSS.css">
 
     <style>
         
@@ -96,7 +96,7 @@
     <!-- AJAX link -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="../../jsFile/signUpJS.js"></script>
+    <script src="jsFile/signUpJS.js"></script>
     <script>
         $(document).ready(function() {
             $('.tabs li').click(function(){
