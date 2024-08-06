@@ -6,8 +6,9 @@
     <title>Sign Up</title>
 
     <!-- BS LINKS -->
-    <link rel="stylesheet" href="../../bsCSS/bootstrap.css">
-    <link rel="stylesheet" href="../../bsCSS/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../../bsCSS/bootstrap.css">
+    <link rel="stylesheet" href="../../bsCSS/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="../../bsJS/bootstrap.bundle.min.js"></script>
 
     <!-- Font Awesome Link -->
@@ -275,21 +276,21 @@
         $(document).ready(function() {
             $.ajax({
                 type: "GET",
-                url: "../loadFunctions/fetchLoggedIn.php",
+                url: "../onloadFunction/getLoggedIn.php",
                 dataType: 'json',
                 success: function(response) {
                     if (response.status === 'success') {
                         
                         
-                        $('#userName').text(response.loggedInUserData.user_name);
-                        $('#userPosition').text(response.loggedInUserData.user_position);
-                        $('#profileImage').attr('src', '../../images/profile/' + response.loggedInUserData.user_img);
+                        $('#userName').text(response.loggedInUserData.admin_email);
+                        $('#userPosition').text("ADMIN");
+                        $('#profileImage').attr('src', '../../images/profile/' + response.loggedInUserData.admin_img);
                         
 
                     } else {
 
                         alert(response.message);
-                        window.location.href = '../../index.html';
+                        window.location.href = '../../index.php';
                     }
                 },
                 error: function(xhr, status, error) {
@@ -319,7 +320,7 @@
                     formData.append('fileName', randomFileName);
 
                     $.ajax({
-                        url: '../buttonFunctions/uploadProfileImage.php',
+                        url: '../buttonFunction/uploadProfileButton.php',
                         type: 'POST',
                         data: formData,
                         processData: false,
